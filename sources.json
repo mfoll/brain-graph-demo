@@ -1,7 +1,7 @@
 {
   "brain-graph": {
-    "release": "v1.0.0",
-    "commit": "07b6c4455eb5a79249af420674b26ae3157ec2a9"
+    "release": "v1.1.0",
+    "commit": "ed4ae2a169f26641542afb4a633db72beeef58de"
   },
   "vaults": {
     "second-brain-demo-cancer-lab": "13d9e98043956d6fedf6ab7422b21530a3bff399",
