@@ -15,7 +15,7 @@ Everything works as in Brain Graph except what needs the local server: there is 
 
 ## Rebuild
 
-The site comes from the `static-demo` branch of Brain Graph and from checkouts of the demo vaults next to this folder (`../second-brain-demo-cancer-lab` and the others named in `vaults.json`).
+The site comes from Brain Graph's `main` branch (its static build) and from checkouts of the demo vaults next to this folder (`../second-brain-demo-cancer-lab` and the others named in `vaults.json`).
 
 ```bash
 cd ../brain-graph && pnpm install && pnpm build:static
