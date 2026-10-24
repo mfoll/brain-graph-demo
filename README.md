@@ -11,17 +11,19 @@ Everything works as in Brain Graph except what needs the local server: there is 
 - `site/` is the published site: Brain Graph's static build and, under `site/data/`, each vault's graph, notes, images, saved layout and settings.
 - `vaults.json` lists the vaults and their labels; the first one opens by default.
 - `state/` holds the layout and settings each vault starts with, in Brain Graph's own format (`layouts/<slug>.json`, `settings/<slug>.json`).
-- `.github/workflows/pages.yml` publishes `site/` to GitHub Pages on every push to `main`. Nothing is built on GitHub.
+- `sources.json` records the Brain Graph release and the commit of each vault the site was built from.
+- `.github/workflows/rebuild.yml` runs `scripts/rebuild.sh` once a day and on demand. When a new Brain Graph release or a vault commit changes `sources.json`, it commits the rebuilt `site/` and deploys it; otherwise it stops.
+- `.github/workflows/pages.yml` publishes the committed `site/` to GitHub Pages on every push to `main`.
 
 ## Rebuild
 
-The site comes from Brain Graph's `main` branch (its static build) and from checkouts of the demo vaults next to this folder (`../second-brain-demo-cancer-lab` and the others named in `vaults.json`). The export runs a TypeScript file directly, so it needs Node.js 22.18 or newer.
+The site is built from Brain Graph's latest release and fresh clones of the vaults named in `vaults.json`. Each note's modification time is set to its last commit, so a rebuild of the same sources produces the same files and Brain Graph's edit-recency view follows the vault's history.
+
+To rebuild by hand, you need Git, jq, Python 3, pnpm and Node.js 22.18 or newer (the export runs a TypeScript file directly):
 
 ```bash
-cd ../brain-graph && pnpm install && pnpm build:static
-cd ../brain-graph-demo
-rm -rf site && cp -R ../brain-graph/dist-static site && touch site/.nojekyll
-node ../brain-graph/server/export-static.ts --config vaults.json --state state --out site
+scripts/rebuild.sh            # only if a source changed
+scripts/rebuild.sh --force    # anyway
 ```
 
 The export reads the vaults through Brain Graph's own server code, so the graph, note text and images are what the local app would show. It leaves out absolute paths and files in dot-folders.

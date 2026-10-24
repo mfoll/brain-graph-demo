@@ -1,0 +1,17 @@
+{
+  "brain-graph": {
+    "release": "v1.0.0",
+    "commit": "07b6c4455eb5a79249af420674b26ae3157ec2a9"
+  },
+  "vaults": {
+    "second-brain-demo-cancer-lab": "13d9e98043956d6fedf6ab7422b21530a3bff399",
+    "second-brain-demo-cafe": "055d0174badaec12f74c81bceceee47dc0211738",
+    "second-brain-demo-community-club": "71a619b9747c6f7fb71711661a785eff28334c51",
+    "second-brain-demo-freelancer": "2d437f6032decd0bca17f2c0ed4a9c3b8c528430",
+    "second-brain-demo-household": "874b7540c673214b90a477a71d90909dd15ece7a",
+    "second-brain-demo-hr-assistant": "615a7550e47f4e5e7b031fca7c19509451febef4",
+    "second-brain-demo-novelist": "fc34fd3e5106096538c54fd2430556af3a3351ee",
+    "second-brain-demo-startup": "56cc66320805be98ee7c03b2a043fc175feaf80e",
+    "second-brain-demo-teacher": "52b11b2bf9e80dfda96c1f7760694e6e78ba10d8"
+  }
+}

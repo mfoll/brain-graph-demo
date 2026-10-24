@@ -1,11 +1,13 @@
 # Publishes the committed site/ folder to GitHub Pages. Nothing is built here: the site is built
-# locally (see README.md) and committed. Repository settings: Pages → Source → GitHub Actions.
+# locally or by the daily Rebuild demo workflow (see README.md) and committed; that workflow
+# calls this one, because its own push does not trigger it. Repository settings: Pages → Source → GitHub Actions.
 name: Deploy to Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: read
@@ -24,6 +26,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: main
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
