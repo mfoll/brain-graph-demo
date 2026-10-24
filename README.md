@@ -37,4 +37,4 @@ python3 -m http.server 8000 -d /tmp/pages   # then open http://localhost:8000/br
 
 ## Licence
 
-Brain Graph and the demo vaults are MIT licensed; see their repositories.
+Brain Graph and the demo vaults are MIT licensed, and so is this site; see [LICENSE](LICENSE).
