@@ -4,7 +4,7 @@ A live, read-only demo of [Brain Graph](https://github.com/mfoll/brain-graph), t
 
 Open it at <https://mfoll.github.io/brain-graph-demo/> and pick a vault from the menu at the top left: a cancer genomics lab, a bakery, a community club, a freelance designer, a household, an HR team, a novelist, a startup engineering team and a teacher. Everything in them is fictional. Each vault is also a repository you can clone and open in any Markdown editor; the [Second Brain template](https://github.com/mfoll/second-brain-template#example-vaults) lists all nine.
 
-Everything works as in Brain Graph except what needs the local server: there is no **Open in Tolaria**, no adding vaults, and no live updates. Layout and settings changes, including saved views, stay in your browser; clear the site data to start again. **Replay agent** plays a short made-up session of two agents, built from the vault's own links, so you can see notes pulse blue as they are read and red as they are written.
+Everything works as in Brain Graph except what needs the local server: there is no **Open in Tolaria**, no adding vaults, and no live updates. Layout and settings changes, including saved views, stay in your browser; clear the site data to start again. **Replay agent** plays a short made-up session of two agents, built from the vault's own links, so you can see notes pulse blue as they are read and red as they are written, and a dot run along each link an agent follows.
 
 ## What is here
 
