@@ -1,0 +1,11 @@
+[
+  { "label": "Varga Lab Brain", "path": "../second-brain-demo-cancer-lab" },
+  { "label": "Hollowgate Bakehouse Brain", "path": "../second-brain-demo-cafe" },
+  { "label": "Fernhollow Club Brain", "path": "../second-brain-demo-community-club" },
+  { "label": "Brennick Design Brain", "path": "../second-brain-demo-freelancer" },
+  { "label": "Brierly Household Brain", "path": "../second-brain-demo-household" },
+  { "label": "Castellane HR Brain", "path": "../second-brain-demo-hr-assistant" },
+  { "label": "Quayle Writing Brain", "path": "../second-brain-demo-novelist" },
+  { "label": "Arneberg Engineering Brain", "path": "../second-brain-demo-startup" },
+  { "label": "Marchbank Teaching Brain", "path": "../second-brain-demo-teacher" }
+]

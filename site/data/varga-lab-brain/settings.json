@@ -1,0 +1,25 @@
+{
+  "view": {
+    "hideArchived": true,
+    "hideOrphans": false,
+    "collapseTypes": [],
+    "recency": false,
+    "hulls": true,
+    "names": true,
+    "labels": false,
+    "minDegree": 0,
+    "regionSize": 0.8,
+    "linkOpacity": 0.3,
+    "linkWidth": 1,
+    "labelThreshold": 7,
+    "ghosts": false,
+    "bridges": true,
+    "activity": true,
+    "hiddenTypes": [
+      "Type"
+    ],
+    "hiddenKinds": [
+      "body"
+    ]
+  }
+}

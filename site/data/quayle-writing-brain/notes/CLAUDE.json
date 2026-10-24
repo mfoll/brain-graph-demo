@@ -1,0 +1,1 @@
+{"id":"CLAUDE","markdown":"---\ntype: Guide\n_organized: true\n---\n\n# Claude Code Compatibility\n\n@AGENTS.md\n\nDaily vault instructions are imported from `AGENTS.md`. When adding this import to an existing setup, preserve its Claude-specific instructions and avoid a duplicate import.\n","modified":"2026-10-22T19:08:29.757Z"}
