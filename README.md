@@ -13,7 +13,7 @@ Everything works as in Brain Graph except what needs the local server: there is 
 - `state/` holds the layout and settings each vault starts with, in Brain Graph's own format (`layouts/<slug>.json`, `settings/<slug>.json`).
 - `sources.json` records the Brain Graph release and the commit of each vault the site was built from.
 - `media/` holds files other pages use from this site, such as the Brain Graph animation in the Second Brain template's README. Each rebuild copies it into `site/media/`.
-- `.github/workflows/rebuild.yml` runs `scripts/rebuild.sh` every hour and on demand. When a new Brain Graph release or a vault commit changes `sources.json`, it commits the rebuilt `site/` and deploys it; otherwise it stops.
+- `.github/workflows/rebuild.yml` runs `scripts/rebuild.sh` once a day (05:41 UTC) and on demand: start it from the Actions tab right after a Brain Graph release. When a new Brain Graph release or a vault commit changes `sources.json`, it commits the rebuilt `site/` and deploys it; otherwise it stops.
 - `.github/workflows/pages.yml` publishes the committed `site/` to GitHub Pages on every push to `main`.
 
 ## Rebuild
