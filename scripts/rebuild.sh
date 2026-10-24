@@ -71,12 +71,19 @@ cp -R "$work/brain-graph/dist-static" "$work/site"
 touch "$work/site/.nojekyll"
 node "$work/brain-graph/server/export-static.ts" --config "$work/config/vaults.json" --state "$root/state" --out "$work/site"
 
-# The export leaves out absolute paths; refuse to publish if one slipped through.
-if grep -rIlE "$work|/home/runner|/Users/" "$work/site" >/dev/null; then
-  echo "absolute paths found in the export; not publishing" >&2
-  grep -rIlE "$work|/home/runner|/Users/" "$work/site" >&2
-  exit 1
-fi
+# Privacy check before publishing: no absolute paths, nothing tied to the maintainer's employer
+# or name outside the github.com/mfoll links, and nothing shaped like a credential.
+check() { # label, extended regex, case-insensitive flag
+  if grep -rIl $3 -E "$2" "$work/site/data" >/dev/null; then
+    echo "privacy check failed ($1); not publishing:" >&2
+    grep -rIl $3 -E "$2" "$work/site/data" | sed "s|$work/||" >&2
+    exit 1
+  fi
+}
+check "absolute path" "$work|/home/runner|/Users/" ""
+check "employer" "iarc|who\.int" -i
+check "maintainer name" "(^|[^m/])Foll([^a-z]|$)" ""
+check "credential" "AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{36}|github_pat_|sk-[A-Za-z0-9]{20}|BEGIN [A-Z ]*PRIVATE KEY" ""
 
 rm -rf "$root/site"
 cp -R "$work/site" "$root/site"
