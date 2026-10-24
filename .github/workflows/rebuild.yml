@@ -1,10 +1,11 @@
-# Rebuilds the demo once a day from the latest Brain Graph release and the nine vault
-# repositories. When either changed, commits site/ and sources.json, then deploys to Pages.
+# Rebuilds the demo every hour from the latest Brain Graph release and the nine vault
+# repositories. When either changed, commits site/ and sources.json, then deploys to Pages;
+# otherwise it stops after checking the sources.
 name: Rebuild demo
 
 on:
   schedule:
-    - cron: '41 5 * * *'
+    - cron: '41 * * * *'
   workflow_dispatch:
     inputs:
       force:

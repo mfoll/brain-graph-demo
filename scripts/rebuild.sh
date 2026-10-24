@@ -69,6 +69,9 @@ done
 
 cp -R "$work/brain-graph/dist-static" "$work/site"
 touch "$work/site/.nojekyll"
+# Files served from the site for other pages (the README animation in media/) are kept outside site/,
+# which this script replaces, and copied in.
+[ -d "$root/media" ] && cp -R "$root/media" "$work/site/media"
 node "$work/brain-graph/server/export-static.ts" --config "$work/config/vaults.json" --state "$root/state" --out "$work/site"
 
 # Privacy check before publishing: no absolute paths, nothing tied to the maintainer's employer
