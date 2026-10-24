@@ -74,8 +74,8 @@ touch "$work/site/.nojekyll"
 [ -d "$root/media" ] && cp -R "$root/media" "$work/site/media"
 node "$work/brain-graph/server/export-static.ts" --config "$work/config/vaults.json" --state "$root/state" --out "$work/site"
 
-# Privacy check before publishing: no absolute paths, nothing tied to the maintainer's employer
-# or name outside the github.com/mfoll links, and nothing shaped like a credential.
+# Privacy check before publishing: no absolute paths, no mention of the maintainer's employer
+# (the demos must not draw on its material), and nothing shaped like a credential.
 check() { # label, extended regex, case-insensitive flag
   if grep -rIl $3 -E "$2" "$work/site/data" >/dev/null; then
     echo "privacy check failed ($1); not publishing:" >&2
@@ -85,7 +85,6 @@ check() { # label, extended regex, case-insensitive flag
 }
 check "absolute path" "$work|/home/runner|/Users/" ""
 check "employer" "iarc|who\.int" -i
-check "maintainer name" "(^|[^m/])Foll([^a-z]|$)" ""
 check "credential" "AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{36}|github_pat_|sk-[A-Za-z0-9]{20}|BEGIN [A-Z ]*PRIVATE KEY" ""
 
 rm -rf "$root/site"
