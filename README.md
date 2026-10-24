@@ -2,7 +2,7 @@
 
 A live, read-only demo of [Brain Graph](https://github.com/mfoll/brain-graph), the interactive map of a Markdown vault, running on nine fictional Second Brain vaults built from the [Second Brain template](https://github.com/mfoll/second-brain-template).
 
-Open it at <https://mfoll.github.io/brain-graph-demo/> and pick a vault from the menu at the top left: a cancer genomics lab, a bakery, a community club, a freelance designer, a household, an HR team, a novelist, a startup engineering team and a teacher. Everything in them is fictional.
+Open it at <https://mfoll.github.io/brain-graph-demo/> and pick a vault from the menu at the top left: a cancer genomics lab, a bakery, a community club, a freelance designer, a household, an HR team, a novelist, a startup engineering team and a teacher. Everything in them is fictional. Each vault is also a repository you can clone and open in any Markdown editor; the [Second Brain template](https://github.com/mfoll/second-brain-template#example-vaults) lists all nine.
 
 Everything works as in Brain Graph except what needs the local server: there is no **Open in Tolaria**, no adding vaults, and no live updates. Layout and settings changes, including saved views, stay in your browser; clear the site data to start again. **Replay agent** shows how notes pulse when an agent reads and writes them.
 
@@ -15,7 +15,7 @@ Everything works as in Brain Graph except what needs the local server: there is 
 
 ## Rebuild
 
-The site comes from Brain Graph's `main` branch (its static build) and from checkouts of the demo vaults next to this folder (`../second-brain-demo-cancer-lab` and the others named in `vaults.json`).
+The site comes from Brain Graph's `main` branch (its static build) and from checkouts of the demo vaults next to this folder (`../second-brain-demo-cancer-lab` and the others named in `vaults.json`). The export runs a TypeScript file directly, so it needs Node.js 22.18 or newer.
 
 ```bash
 cd ../brain-graph && pnpm install && pnpm build:static
