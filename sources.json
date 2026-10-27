@@ -1,17 +1,17 @@
 {
   "brain-graph": {
-    "release": "v1.1.0",
-    "commit": "ed4ae2a169f26641542afb4a633db72beeef58de"
+    "release": "v1.2.0",
+    "commit": "da103717e1c1acd2ea79b825d9892b5097f8e671"
   },
   "vaults": {
-    "second-brain-demo-cancer-lab": "13d9e98043956d6fedf6ab7422b21530a3bff399",
-    "second-brain-demo-cafe": "055d0174badaec12f74c81bceceee47dc0211738",
-    "second-brain-demo-community-club": "71a619b9747c6f7fb71711661a785eff28334c51",
-    "second-brain-demo-freelancer": "2d437f6032decd0bca17f2c0ed4a9c3b8c528430",
-    "second-brain-demo-household": "874b7540c673214b90a477a71d90909dd15ece7a",
-    "second-brain-demo-hr-assistant": "615a7550e47f4e5e7b031fca7c19509451febef4",
-    "second-brain-demo-novelist": "fc34fd3e5106096538c54fd2430556af3a3351ee",
-    "second-brain-demo-startup": "56cc66320805be98ee7c03b2a043fc175feaf80e",
-    "second-brain-demo-teacher": "52b11b2bf9e80dfda96c1f7760694e6e78ba10d8"
+    "second-brain-demo-cancer-lab": "16a4d947936f4494dd844d513bc704e9434ea394",
+    "second-brain-demo-cafe": "c814a6b24371e84eb03b41a97e20c0093642224c",
+    "second-brain-demo-community-club": "1181f394242eba2d6971c4b4545d33afce43c7cb",
+    "second-brain-demo-freelancer": "d4cb11fbc3d6ac7cad3017c00c3bac86733843e2",
+    "second-brain-demo-household": "3c0d09a469217cf0beb060502959710f99a28c72",
+    "second-brain-demo-hr-assistant": "ddb98d34fa598e6275a30b3f7050e0317ff8bbd5",
+    "second-brain-demo-novelist": "53391a011d3a8e832eee2d52e14420a461722cea",
+    "second-brain-demo-startup": "f10260f8defca2acbf85217b7b84458adbbaf70d",
+    "second-brain-demo-teacher": "0aeabe5bf2f0adaae41f7ac0e1278d6da56cc236"
   }
 }
